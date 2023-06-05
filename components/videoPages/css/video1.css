@@ -1,0 +1,95 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+video {
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    margin-right: 20px; 
+}
+
+.video-info {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.video-details span {
+    margin-right: 10px;
+}
+
+.subscribe-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-dislike-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.like-button,
+.dislike-button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-description {
+    margin-bottom: 10px;
+}
+
+.video-description p {
+    max-width: 800px;
+    word-wrap: break-word;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
