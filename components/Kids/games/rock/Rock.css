@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: navy;
+}
+
+#game-container {
+    margin-top: 50px;
+}
+
+#choices-container {
+    margin-bottom: 20px;
+}
+
+.choice-btn {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#result-message {
+    font-weight: bold;
+}

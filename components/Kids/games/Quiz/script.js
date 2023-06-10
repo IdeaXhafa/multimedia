@@ -10,7 +10,21 @@ const quizData = [
         options: ["Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh"],
         answer: "Leonardo da Vinci"
     },
-    // Add more questions...
+    {
+        question: "What is the name of the fairy in Peter Pan?",
+        options: ["Idea", "Tinkerbell", "Cinderella"],
+        answer: "Tinkerbell"
+    },
+    {
+        question: "Is Pluto a planet?",
+        options: ["Yes", "No"],
+        answer: "No"
+    },
+    {
+        question: "What color are Smurfs?",
+        options: ["Blue", "Green", "Yellow"],
+        answer: "Blue"
+    },
 ];
 
 const quizContainer = document.getElementById("quiz-container");

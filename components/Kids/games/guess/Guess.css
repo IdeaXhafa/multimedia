@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: navy;
+}
+
+input[type="number"] {
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+}
+
+#result-message {
+    font-weight: bold;
+    margin-top: 20px;
+}
