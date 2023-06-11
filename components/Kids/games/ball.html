@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple JavaScript Game</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
         canvas {
             border: 1px solid black;
         }
     </style>
 </head>
+
 <body>
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <script>
         // Game initialization
         const canvas = document.getElementById('gameCanvas');
         const context = canvas.getContext('2d');
-        
+
         let x = canvas.width / 2;
         let y = canvas.height - 30;
         let dx = 2;
         let dy = -2;
         const ballRadius = 10;
-        
+
         let paddleWidth = 75;
         let paddleHeight = 10;
         let paddleX = (canvas.width - paddleWidth) / 2;
         let rightPressed = false;
         let leftPressed = false;
 
-        let barrierRowCount = 3;
+        let barrierRowCount = 4; // Increase the number of barrier rows
         let barrierColumnCount = 5;
-        let barrierWidth = 75;
+        let barrierWidth = 60; // Decrease the barrier width to create spaces
         let barrierHeight = 20;
         let barrierPadding = 10;
         let barrierOffsetTop = 30;
@@ -42,7 +52,12 @@
                 barriers[c][r] = { x: 0, y: 0, status: 1 };
             }
         }
-        
+
+        function showGameOverAlert() {
+            alert('Game Over');
+            window.location.href = 'http://localhost/multimedia/components/Kids/Kids.php';
+        }
+
         function drawBall() {
             context.beginPath();
             context.arc(x, y, ballRadius, 0, Math.PI * 2);
@@ -50,7 +65,7 @@
             context.fill();
             context.closePath();
         }
-        
+
         function drawPaddle() {
             context.beginPath();
             context.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -90,18 +105,18 @@
                 }
             }
         }
-        
+
         function draw() {
             context.clearRect(0, 0, canvas.width, canvas.height);
             drawBall();
             drawPaddle();
             drawBarriers();
             collisionDetection();
-        
+
             // Move the ball
             x += dx;
             y += dy;
-        
+
             // Check collision with walls
             if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
                 dx = -dx;
@@ -114,24 +129,24 @@
                     dy = -dy;
                 } else {
                     alert('Game Over');
-                    document.location.reload();
+                    showGameOverAlert();
                 }
             }
-        
+
             // Move the paddle
             if (rightPressed && paddleX < canvas.width - paddleWidth) {
                 paddleX += 7;
             } else if (leftPressed && paddleX > 0) {
                 paddleX -= 7;
             }
-        
+
             requestAnimationFrame(draw);
         }
-        
+
         // Keyboard input handling
         document.addEventListener('keydown', keyDownHandler, false);
         document.addEventListener('keyup', keyUpHandler, false);
-        
+
         function keyDownHandler(e) {
             if (e.key === 'Right' || e.key === 'ArrowRight') {
                 rightPressed = true;
@@ -139,7 +154,7 @@
                 leftPressed = true;
             }
         }
-        
+
         function keyUpHandler(e) {
             if (e.key === 'Right' || e.key === 'ArrowRight') {
                 rightPressed = false;
@@ -147,8 +162,9 @@
                 leftPressed = false;
             }
         }
-        
+
         draw();
     </script>
 </body>
+
 </html>

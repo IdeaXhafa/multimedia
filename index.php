@@ -58,18 +58,6 @@
         <div class="card">
           <a href="./components/videoPages/video1.php">
             <div class="card-image">
-              <img src="./images/photo2.png">
-            </div>
-            <div class="category"> Illustration </div>
-            <div class="heading"> Calming nature sounds
-              <div class="author"> 10M views 5 years ago</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="./components/videoPages/video1.php">
-            <div class="card-image">
               <img src="./images/photo3.png">
             </div>
             <div class="category"> Illustration </div>
