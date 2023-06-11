@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video1</title>
 
-    <link rel="stylesheet" href="/components/videoPages/css/video1.css">
+    <link rel="stylesheet" href="./css/video1.css">
 
     <style>
         .search-bar {
@@ -104,20 +104,20 @@
 
     <div class="video-container">
 
-        <video src="/videos/video1.mp4" controls style="height: 600px; width: 900px; right: 20px;"></video>
+        <video src="../../videos/video5.mp4" controls style="height: 600px; width: 900px; right: 20px;"></video>
 
         <div class="related-videos">
             <strong>
                 <p>Related Content:</p>
             </strong>
             <div class="related-video">
-                <video src="/videos/video2.mp4" controls></video>
+                <video src="../../videos/video1.mp4" controls></video>
             </div>
             <div class="related-video">
-                <video src="/videos/video3.mp4" controls></video>
+                <video src="../../videos/video2.mp4" controls></video>
             </div>
             <div class="related-video">
-                <video src="/videos/video4.mp4" controls></video>
+                <video src="../../videos/video3.mp4" controls></video>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@
         </div>
     </div>
 
-    <script src="/components/videoPages/js/videojs.js"></script>
+    <script src="./js/videojs.js"></script>
 </body>
 
 </html>

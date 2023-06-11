@@ -21,7 +21,4 @@
         </aside>
     </div>
 </body>
-
-<script src="App.js"></script>
-
 </html>
