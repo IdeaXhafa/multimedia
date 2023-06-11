@@ -13,6 +13,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-top: 100px;
     }
   </style>
 </head>
@@ -34,42 +35,92 @@
                     <source src="/videos/video1.mp4" type="video/mp4">
                 </video> -->
       <div class="video-container" id="photoContainer">
-        <a href="./components/videoPages/video1.php">
-          <img src="./images/photo1.png" alt="Video 1" style="height: 300px; width: 400px" />
-          <p style="text-decoration: none; color: black">
-            Light rain for Sleeping, Relax, Study, Insomnia, Reduce Stress
-          </p>
-          <h6>10M views 5 years ago</h6>
-        </a>
-        <a href="./components/videoPages/video2.php">
-          <img src="./images/photo2.png" alt="Video 2" style="height: 300px; width: 400px" />
-          <p>Calming nature sounds</p>
-        </a>
-        <a href="./components/videoPages/video2.php">
-          <img src="./images/photo3.png" alt="Video 3" style="height: 300px; width: 400px" />
-          <p>Calming ocean waves for sleeping</p>
-        </a>
-        <a href="./components/videoPages/video2.php">
-          <img src="./images/photo4.png" alt="Video 4" style="height: 300px; width: 400px" />
-          <p>Guitar sounds for 20 minutes</p>
-        </a>
-        <a href="./components/videoPages/video2.php">
-          <img src="./images/photo5.png" alt="Video 5" style="height: 300px; width: 400px" />
-          <p>Guitar Mozart Play Canon 8d</p>
-        </a>
-        <a href="./components/videoPages/video2.php">
-          <img src="./images/photo6.png" alt="Video 6" style="height: 300px; width: 400px" />
-          <p>Calming vinyl sounds</p>
-        </a>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo1.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Light rain for Sleeping, Relax, Study, Insomnia, Reduce Stress
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo2.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Calming nature sounds
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo2.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Calming nature sounds
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo3.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Calming ocean waves for sleeping
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo4.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Guitar sounds for 20 minutes
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo5.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Guitar Mozart Play Canon 8d
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video1.php">
+            <div class="card-image">
+              <img src="./images/photo6.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Calming vinyl sounds
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
       </div>
-      <!-- <div class="video-container">
-                    <video src="/videos/video1.mp4" controls style="height: 400px; width: 400px;"></video>
-                    <video src="/videos/video2.mp4" controls style="height: 400px; width: 400px;"></video>
-                    <video src="/videos/video3.mp4" controls style="height: 400px; width: 400px;"></video>
-                    <video src="/videos/video4.mp4" controls style="height: 400px; width: 400px;"></video>
-                    <video src="/videos/video5.mp4" controls style="height: 400px; width: 400px;"></video>
-                    <video src="/videos/video6.mp4" controls style="height: 400px; width: 400px;"></video>
-                </div> -->
     </main>
   </div>
 
@@ -99,7 +150,6 @@
           }
         }
       });
-
   </script>
 </body>
 
