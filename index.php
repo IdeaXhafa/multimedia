@@ -25,11 +25,6 @@
 
     <!-- Main content -->
     <main class="main-content">
-      <!-- Mos e fshij se spo bon sidebar tanaj for some reason -->
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search..." />
-        <button type="submit" id="searchButton">Search</button>
-      </div>
 
       <!-- <video id="myVideo" autoplay style="height: 300px; width: 300px;">
                     <source src="/videos/video1.mp4" type="video/mp4">
@@ -126,31 +121,28 @@
 
   <script src="https://unpkg.com/page/page.js"></script>
   <script src="node_modules/pixi.js/dist/pixi.min.js"></script>
-
   <script>
-    document
-      .getElementById("searchButton")
-      .addEventListener("click", function() {
-        var searchInput = document
-          .getElementById("searchInput")
-          .value.toLowerCase();
-        var photoContainer = document.getElementById("photoContainer");
-        var photoElements = photoContainer.getElementsByTagName("a");
+    document.getElementById("searchInput").addEventListener("input", function() {
+      var searchInput = this.value.toLowerCase();
+      var photoContainer = document.getElementById("photoContainer");
+      var cardElements = photoContainer.getElementsByClassName("card");
 
-        // Loop through each photo element
-        for (var i = 0; i < photoElements.length; i++) {
-          var photoElement = photoElements[i];
-          var photoText = photoElement.textContent.toLowerCase();
+      // Loop through each card element
+      for (var i = 0; i < cardElements.length; i++) {
+        var cardElement = cardElements[i];
+        var headingElement = cardElement.querySelector(".heading");
+        var headingText = headingElement.textContent.toLowerCase();
 
-          // Check if the search input is included in the photo text
-          if (photoText.includes(searchInput)) {
-            photoElement.style.display = "flex";
-          } else {
-            photoElement.style.display = "none";
-          }
+        // Check if the search input is included in the heading text
+        if (headingText.includes(searchInput)) {
+          cardElement.style.display = "block";
+        } else {
+          cardElement.style.display = "none";
         }
-      });
+      }
+    });
   </script>
+
 </body>
 
 </html>
