@@ -99,6 +99,78 @@
           </a>
         </div>
 
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=cat.mp4">
+            <div class="card-image">
+              <img src="./images/cat.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Cute Cat Video
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=sleep.mp4">
+            <div class="card-image">
+              <img src="./images/sleep.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Cat Sleeping
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=city.mp4">
+            <div class="card-image">
+              <img src="./images/night.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> City night life
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=clothing.mp4">
+            <div class="card-image">
+              <img src="./images/clothes.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Looking for clothes
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=paris.mp4">
+            <div class="card-image">
+              <img src="./images/paris.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Paris Eifel Tower lights
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./components/videoPages/video.php?file=vienna.mp4">
+            <div class="card-image">
+              <img src="./images/vienna.png">
+            </div>
+            <div class="category"> Illustration </div>
+            <div class="heading"> Vienna, Austria
+              <div class="author"> 10M views 5 years ago</div>
+            </div>
+          </a>
+        </div>
+
       </div>
     </main>
   </div>

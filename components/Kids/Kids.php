@@ -137,8 +137,8 @@
 
     // Load the images for game cards
     PIXI.Loader.shared
-      .add("game-card-1", "../../components/Kids/images/quiz.png")
-      .add("game-card-2", "../../components/Kids/images/sprite.png")
+    //   .add("game-card-1", "../../components/Kids/images/quiz.png")
+    //   .add("game-card-2", "../../components/Kids/images/sprite.png")
       // Add more loaders for other game cards
       .load(setup);
 
