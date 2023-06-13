@@ -7,46 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeTube</title>
     <link rel="stylesheet" href="../../style.css">
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      integrity="sha384-pzLF8o8R/W9GL5gqjSvLUnS2jB8ih5rUjVw5WfySi5StV9gvRMu4w8Qj84b4vW3X"
-      crossorigin="anonymous"
-    >
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
         .game-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 30px;
         }
 
         .game-card {
-            width: 400px;
-            height: 300px;
+            width: 300px;
+            height: 400px;
             margin: 20px;
             padding: 20px;
-            border: 1px solid pink;
             border-radius: 8px;
-            background-color: #fff0f3;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .game-card h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
         .game-card img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            background-size: cover;
+        }
+
+        .game-card p {
             margin-bottom: 10px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
         }
     </style>
 </head>
@@ -56,48 +73,56 @@
         <?php include '../../components/includeParts/NavBar.php' ?>
         <div class="game-container">
             <div class="game-card">
-                <img src="../../components/Kids/images/quiz.png" alt="Game 1" style="width: 200px;height: 300px;">
-                <p>General Knowledge Quiz</p>
+                <img src="../../components/Kids/images/quiz.png" alt="Game 1">
+                <h3>General Knowledge Quiz</h3>
+                <p>Test your knowledge with this fun quiz!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Quiz/Quiz.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/sprite.png" alt="Game 2" style="width: 200px;height: 300px;">
-                <p>game</p>
+                <img src="../../components/Kids/images/sprite.png" alt="Game 2">
+                <h3>Game 2</h3>
+                <p>Description of Game 2</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/game/game.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/tic.png" alt="Game 3" style="width: 300px;height: 300px;">
-                <p>Tic Tac Toe</p>
+                <img src="../../components/Kids/images/tic.png" alt="Game 3">
+                <h3>Tic Tac Toe</h3>
+                <p>Play the classic game of Tic Tac Toe!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/TicTacToe/tictactoe.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/numbers.png" alt="Game 3" style="width: 200px;height: 300px;">
-                <p>Guess The number</p>
+                <img src="../../components/Kids/images/numbers.png" alt="Game 4">
+                <h3>Guess The Number</h3>
+                <p>Try to guess the secret number!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/guess/Guess.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/rock.png" alt="Game 3" style="width: 200px;height: 300px;">
-                <p>Rock Paper Scissors</p>
+                <img src="../../components/Kids/images/rock.png" alt="Game 5">
+                <h3>Rock Paper Scissors</h3>
+                <p>Play the classic game of Rock Paper Scissors!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/rock/Rock.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/blue-ball.png" alt="Game 3" style="width: 200px;height: 300px;">
-                <p>Ball game</p>
+                <img src="../../components/Kids/images/blue-ball.png" alt="Game 6">
+                <h3>Ball Game</h3>
+                <p>Play the exciting ball game!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/ball.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/snake.png" alt="Game 3" style="width: 200px;height: 300px;">
-                <p>Snake</p>
+                <img src="../../components/Kids/images/snake.png" alt="Game 7">
+                <h3>Snake</h3>
+                <p>Control the snake and eat the apples!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Snake.html'">Start</button>
             </div>
             <div class="game-card">
-                <img src="../../components/Kids/images/tetris.png" alt="Game 3" style="width: 200px;height: 300px;">
-                <p>Tetris</p>
+                <img src="../../components/Kids/images/tetris.png" alt="Game 8">
+                <h3>Tetris</h3>
+                <p>Play the classic game of Tetris!</p>
                 <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Tetris.html'">Start</button>
             </div>
-            
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-kDeHm1D8MxWtiXyfWlCklGHT0nRRaQ0R75RWFR+oGboz+53b3gdflC3pWq31OANa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

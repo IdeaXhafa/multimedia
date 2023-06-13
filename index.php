@@ -25,14 +25,9 @@
 
     <!-- Main content -->
     <main class="main-content">
-
-      <!-- <video id="myVideo" autoplay style="height: 300px; width: 300px;">
-                    <source src="/videos/video1.mp4" type="video/mp4">
-                </video> -->
       <div class="video-container" id="photoContainer">
-
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video1.mp4">
             <div class="card-image">
               <img src="./images/photo1.png">
             </div>
@@ -43,8 +38,9 @@
           </a>
         </div>
 
+
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video2.mp4">
             <div class="card-image">
               <img src="./images/photo2.png">
             </div>
@@ -56,7 +52,7 @@
         </div>
 
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video3.mp4">
             <div class="card-image">
               <img src="./images/photo3.png">
             </div>
@@ -68,7 +64,7 @@
         </div>
 
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video4.mp4">
             <div class="card-image">
               <img src="./images/photo4.png">
             </div>
@@ -80,7 +76,7 @@
         </div>
 
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video5.mp4">
             <div class="card-image">
               <img src="./images/photo5.png">
             </div>
@@ -92,7 +88,7 @@
         </div>
 
         <div class="card">
-          <a href="./components/videoPages/video1.php">
+          <a href="./components/videoPages/video.php?file=video6.mp4">
             <div class="card-image">
               <img src="./images/photo6.png">
             </div>

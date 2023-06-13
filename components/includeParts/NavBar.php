@@ -43,34 +43,27 @@
                         </a>
                     </li>
                     <li class="list">
-                        <a href="../../multimedia/components/Subscriptions/subscription.php" class="nav-link">
+                        <a href="/multimedia/components/Subscriptions/subscription.php" class="nav-link">
                             <i class="bx bx-bar-chart-alt-2 icon"></i>
                             <span class="link">Subscriptions</span>
-                        </a>
-                    </li>
-
-                    <li class="list">
-                        <a href="../../multimedia/components/Library/library.php" href="#" class="nav-link">
-                            <i class="bx bx-bell icon"></i>
-                            <span class="link">Library</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="../../multimedia/components/WatchLater/watchLater.php" class="nav-link">
-                            <i class="bx bx-message-rounded icon"></i>
-                            <span class="link">Watch Later</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="../../multimedia/components/Kids/Kids.php" class="nav-link">
-                            <i class="bx bx-pie-chart-alt-2 icon"></i>
-                            <span class="link">Kids</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#" class="nav-link">
                             <i class="bx bx-heart icon"></i>
                             <span class="link">Liked Videos</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/multimedia/components/WatchLater/watchLater.php" class="nav-link">
+                            <i class="bx bx-message-rounded icon"></i>
+                            <span class="link">Watch Later</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/multimedia/components/Kids/Kids.php" class="nav-link">
+                            <i class="bx bx-pie-chart-alt-2 icon"></i>
+                            <span class="link">Kids</span>
                         </a>
                     </li>
                 </ul>
