@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeTube</title>
     <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
     <style>
         body {
             background-color: #f8f9fa;
         }
 
         .container {
-            margin-top: 40px;
+            margin-top: 100px;
         }
 
         .game-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 70px;
         }
 
         .game-card {
@@ -56,14 +56,18 @@
             color: #555;
         }
 
-        .btn-primary {
+        .btn {
             background-color: #007bff;
-            border-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background-color: #0069d9;
-            border-color: #0062cc;
         }
     </style>
 </head>
@@ -76,53 +80,52 @@
                 <img src="../../components/Kids/images/quiz.png" alt="Game 1">
                 <h3>General Knowledge Quiz</h3>
                 <p>Test your knowledge with this fun quiz!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Quiz/Quiz.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Quiz/Quiz.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/sprite.png" alt="Game 2">
                 <h3>Game 2</h3>
                 <p>Description of Game 2</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/game/game.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/game/game.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/tic.png" alt="Game 3">
                 <h3>Tic Tac Toe</h3>
                 <p>Play the classic game of Tic Tac Toe!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/TicTacToe/tictactoe.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/TicTacToe/tictactoe.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/numbers.png" alt="Game 4">
                 <h3>Guess The Number</h3>
                 <p>Try to guess the secret number!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/guess/Guess.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/guess/Guess.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/rock.png" alt="Game 5">
                 <h3>Rock Paper Scissors</h3>
                 <p>Play the classic game of Rock Paper Scissors!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/rock/Rock.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/rock/Rock.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/blue-ball.png" alt="Game 6">
                 <h3>Ball Game</h3>
                 <p>Play the exciting ball game!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/ball.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/ball.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/snake.png" alt="Game 7">
                 <h3>Snake</h3>
                 <p>Control the snake and eat the apples!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Snake.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Snake.html'">Start</button>
             </div>
             <div class="game-card">
                 <img src="../../components/Kids/images/tetris.png" alt="Game 8">
                 <h3>Tetris</h3>
                 <p>Play the classic game of Tetris!</p>
-                <button class="btn btn-primary" onclick="window.location.href = '../../components/Kids/games/Tetris.html'">Start</button>
+                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Tetris.html'">Start</button>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+<?php include('phpcommands.php'); ?>
+
 <head>
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 </head>
@@ -36,6 +38,14 @@
             </div>
             <div class="sidebar-content">
                 <ul class="lists">
+                    <?php if (isset($_SESSION['username'])) : ?>
+                        <li class="list">
+                            <a class="nav-link">
+                                <i class="bx bx-user icon"></i>
+                                <span class="link">Welcome <strong><?php echo $_SESSION['username']; ?></strong></span>
+                            </a>
+                        </li>
+                    <?php endif ?>
                     <li class="list">
                         <a href="/multimedia" class="nav-link">
                             <i class="bx bx-home-alt icon"></i>
@@ -68,18 +78,22 @@
                     </li>
                 </ul>
                 <div class="bottom-cotent">
-                    <li class="list">
-                        <a href="#" class="nav-link">
-                            <i class="bx bx-cog icon"></i>
-                            <span class="link">Settings</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="#" class="nav-link">
-                            <i class="bx bx-log-out icon"></i>
-                            <span class="link">Logout</span>
-                        </a>
-                    </li>
+                    <?php if (isset($_SESSION['username'])) : ?>
+                        <li class="list">
+                            <a href="/multimedia/components/includeParts/phpcommands.php?logout=1" onclick="return confirm('Are you sure you want to logout?');" class="nav-link">
+                                <i class="bx bx-log-out icon"></i>
+                                <span class="link">Logout</span>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!isset($_SESSION['username'])) { ?>
+                        <li class="list">
+                            <a href="/multimedia/components/form/login.php" class="nav-link">
+                                <i class="bx bx-log-in icon"></i>
+                                <span class="link">Log In</span>
+                            </a>
+                        </li>
+                    <?php } ?>
                 </div>
             </div>
         </div>
