@@ -37,6 +37,7 @@
             align-items: center;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            filter: brightness(1.2);
         }
 
         .game-card h3 {
@@ -126,6 +127,60 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.4/pixi.min.js"></script>
+    <script>
+    // Create a Pixi.js application
+    const app = new PIXI.Application();
+
+    document.body.appendChild(app.view);
+
+    // Load the images for game cards
+    PIXI.Loader.shared
+      .add("game-card-1", "../../components/Kids/images/quiz.png")
+      .add("game-card-2", "../../components/Kids/images/sprite.png")
+      // Add more loaders for other game cards
+      .load(setup);
+
+    // Setup function to create game cards and apply color adjustment
+    function setup() {
+      // Create the game cards
+      const gameCard1 = createGameCard("game-card-1", 0x0000FF); // Blue color adjustment
+      const gameCard2 = createGameCard("game-card-2", 0xFF0000); // Red color adjustment
+
+      // Add the game cards to the stage
+      app.stage.addChild(gameCard1, gameCard2);
+    }
+
+    // Function to create a game card sprite with color adjustment
+    function createGameCard(id, color) {
+      const gameCardTexture = PIXI.Loader.shared.resources[id].texture;
+
+      // Create a sprite with the game card texture
+      const gameCardSprite = new PIXI.Sprite(gameCardTexture);
+      gameCardSprite.width = 300;
+      gameCardSprite.height = 200;
+      gameCardSprite.interactive = true;
+
+      // Apply color adjustment using a color matrix filter
+      const colorMatrix = new PIXI.filters.ColorMatrixFilter();
+      colorMatrix.matrix = [
+        1, 0, 0, 0, color >> 16 & 0xFF, // Red
+        0, 1, 0, 0, color >> 8 & 0xFF, // Green
+        0, 0, 1, 0, color & 0xFF, // Blue
+        0, 0, 0, 1, 0 // Alpha
+      ];
+      gameCardSprite.filters = [colorMatrix];
+
+      // Add click event listener
+      gameCardSprite.on("click", () => {
+        // Handle click event
+        console.log(`Clicked on ${id}`);
+      });
+
+      return gameCardSprite;
+    }
+  </script>
 </body>
 
 </html>
