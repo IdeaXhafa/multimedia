@@ -181,21 +181,27 @@ $games = [
         graphics.beginFill(0xFFCC5A, 1);
         graphics.drawStar(80, 510, 7, 50);
         graphics.endFill();
-
         
-        // Create text
-        const textStyle = new PIXI.TextStyle({
-        fontFamily: 'Arial',
-        fontSize: 16,
-        fill: '#000000',
-        });
+        // Load the Google Fonts CSS file
+        const linkElement = document.createElement('link');
+        linkElement.rel = 'stylesheet';
+        linkElement.href = 'https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap';
+        document.head.appendChild(linkElement);
 
-        const text = new PIXI.Text('Made by Idea & Tali !', textStyle);
-        text.x = 150; // Adjust the x-coordinate of the text
-        text.y = 490; // Adjust the y-coordinate of the text
+        // Wait for the font to be loaded
+        linkElement.onload = () => {
+        // Create text using the 'Comic Neue' font
+        const text = new PIXI.Text('Made by Idea & Tali!', new PIXI.TextStyle({
+            fontFamily: 'Comic Neue',
+            fontSize: 30,
+            fill: '#000000', // Set text color to white
+        }));
+
+        // Position the text
+        text.position.set(150, 490);
 
         app.stage.addChild(graphics, text);
-
+        };
     </script>
 </body>
 
