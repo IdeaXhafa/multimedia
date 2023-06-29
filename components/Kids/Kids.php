@@ -1,3 +1,69 @@
+<?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['username'])) {
+    // Check the age value
+    $age = $_SESSION['age'];
+    if ($age < 6) {
+        header('location: ../../index.php');
+    }
+}
+
+$games = [
+    [
+        "imgSrc" => "../../components/Kids/images/quiz.png",
+        "title" => "General Knowledge Quiz",
+        "description" => "Test your knowledge with this fun quiz!",
+        "onClick" => "../../components/Kids/games/Quiz/Quiz.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/sprite.png",
+        "title" => "Game 2",
+        "description" => "Description of Game 2",
+        "onClick" => "../../components/Kids/games/game/game.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/tic.png",
+        "title" => "Tic Tac Toe",
+        "description" => "Play the classic game of Tic Tac Toe!",
+        "onClick" => "../../components/Kids/games/TicTacToe/tictactoe.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/numbers.png",
+        "title" => "Guess The Number",
+        "description" => "Try to guess the secret number!",
+        "onClick" => "../../components/Kids/games/guess/Guess.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/rock.png",
+        "title" => "Rock Paper Scissors",
+        "description" => "Play the classic game of Rock Paper Scissors!",
+        "onClick" => "../../components/Kids/games/rock/Rock.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/blue-ball.png",
+        "title" => "Ball Game",
+        "description" => "Play the exciting ball game!",
+        "onClick" => "../../components/Kids/games/ball.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/snake.png",
+        "title" => "Snake",
+        "description" => "Control the snake and eat the apples!",
+        "onClick" => "../../components/Kids/games/Snake.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/tetris.png",
+        "title" => "Tetris",
+        "description" => "Play the classic game of Tetris!",
+        "onClick" => "../../components/Kids/games/Tetris.html"
+    ]
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,110 +143,22 @@
     <div class="container">
         <?php include '../../components/includeParts/NavBar.php' ?>
         <div class="game-container">
-            <div class="game-card">
-                <img src="../../components/Kids/images/quiz.png" alt="Game 1">
-                <h3>General Knowledge Quiz</h3>
-                <p>Test your knowledge with this fun quiz!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Quiz/Quiz.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/sprite.png" alt="Game 2">
-                <h3>Game 2</h3>
-                <p>Description of Game 2</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/game/game.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/tic.png" alt="Game 3">
-                <h3>Tic Tac Toe</h3>
-                <p>Play the classic game of Tic Tac Toe!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/TicTacToe/tictactoe.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/numbers.png" alt="Game 4">
-                <h3>Guess The Number</h3>
-                <p>Try to guess the secret number!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/guess/Guess.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/rock.png" alt="Game 5">
-                <h3>Rock Paper Scissors</h3>
-                <p>Play the classic game of Rock Paper Scissors!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/rock/Rock.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/blue-ball.png" alt="Game 6">
-                <h3>Ball Game</h3>
-                <p>Play the exciting ball game!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/ball.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/snake.png" alt="Game 7">
-                <h3>Snake</h3>
-                <p>Control the snake and eat the apples!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Snake.html'">Start</button>
-            </div>
-            <div class="game-card">
-                <img src="../../components/Kids/images/tetris.png" alt="Game 8">
-                <h3>Tetris</h3>
-                <p>Play the classic game of Tetris!</p>
-                <button class="btn" onclick="window.location.href = '../../components/Kids/games/Tetris.html'">Start</button>
-            </div>
+            <?php
+            foreach ($games as $game) {
+                echo '<div class="game-card">';
+                echo '<img src="' . $game["imgSrc"] . '" alt="' . $game["title"] . '">';
+                echo '<h3>' . $game["title"] . '</h3>';
+                echo '<p>' . $game["description"] . '</p>';
+                echo '<button class="btn" onclick="window.location.href = \'' . $game["onClick"] . '\'">Start</button>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.4/pixi.min.js"></script>
     <script>
-    // Create a Pixi.js application
-    const app = new PIXI.Application();
-
-    document.body.appendChild(app.view);
-
-    // Load the images for game cards
-    PIXI.Loader.shared
-    //   .add("game-card-1", "../../components/Kids/images/quiz.png")
-    //   .add("game-card-2", "../../components/Kids/images/sprite.png")
-      // Add more loaders for other game cards
-      .load(setup);
-
-    // Setup function to create game cards and apply color adjustment
-    function setup() {
-      // Create the game cards
-      const gameCard1 = createGameCard("game-card-1", 0x0000FF); // Blue color adjustment
-      const gameCard2 = createGameCard("game-card-2", 0xFF0000); // Red color adjustment
-
-      // Add the game cards to the stage
-      app.stage.addChild(gameCard1, gameCard2);
-    }
-
-    // Function to create a game card sprite with color adjustment
-    function createGameCard(id, color) {
-      const gameCardTexture = PIXI.Loader.shared.resources[id].texture;
-
-      // Create a sprite with the game card texture
-      const gameCardSprite = new PIXI.Sprite(gameCardTexture);
-      gameCardSprite.width = 300;
-      gameCardSprite.height = 200;
-      gameCardSprite.interactive = true;
-
-      // Apply color adjustment using a color matrix filter
-      const colorMatrix = new PIXI.filters.ColorMatrixFilter();
-      colorMatrix.matrix = [
-        1, 0, 0, 0, color >> 16 & 0xFF, // Red
-        0, 1, 0, 0, color >> 8 & 0xFF, // Green
-        0, 0, 1, 0, color & 0xFF, // Blue
-        0, 0, 0, 1, 0 // Alpha
-      ];
-      gameCardSprite.filters = [colorMatrix];
-
-      // Add click event listener
-      gameCardSprite.on("click", () => {
-        // Handle click event
-        console.log(`Clicked on ${id}`);
-      });
-
-      return gameCardSprite;
-    }
-  </script>
+    </script>
 </body>
 
 </html>

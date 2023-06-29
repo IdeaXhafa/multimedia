@@ -70,12 +70,15 @@
                             <span class="link">Watch Later</span>
                         </a>
                     </li>
-                    <li class="list">
-                        <a href="/multimedia/components/Kids/Kids.php" class="nav-link">
-                            <i class="bx bx-pie-chart-alt-2 icon"></i>
-                            <span class="link">Kids</span>
-                        </a>
-                    </li>
+                    <?php if (isset($_SESSION['age']) && $_SESSION['age'] > 6) : ?>
+                        <li class="list">
+                            <a href="/multimedia/components/Kids/Kids.php" class="nav-link">
+                                <i class="bx bx-pie-chart-alt-2 icon"></i>
+                                <span class="link">Kids</span>
+                            </a>
+                        </li>
+                    <?php endif ?>
+
                 </ul>
                 <div class="bottom-cotent">
                     <?php if (isset($_SESSION['username'])) : ?>

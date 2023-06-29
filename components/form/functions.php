@@ -89,11 +89,13 @@ if (isset($_POST['login_user'])) {
         $logged_in_user = mysqli_fetch_assoc($results);
         if ($logged_in_user['user_type'] == 'admin') {
             $_SESSION['username'] = $username;
+            $_SESSION['age'] = $logged_in_user['age'];
             $_SESSION['user_type'] = $logged_in_user['user_type'];
             $_SESSION['success']  = "You are now logged in Admin";
             header('location: login.php');
         } else {
             $_SESSION['username'] = $username;
+            $_SESSION['age'] = $logged_in_user['age'];
             $_SESSION['user_id'] = $logged_in_user['id'];
             $_SESSION['success'] = "You are now logged in";
             header('location: ../../index.php');
