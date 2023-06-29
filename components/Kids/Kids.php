@@ -60,6 +60,18 @@ $games = [
         "title" => "Tetris",
         "description" => "Play the classic game of Tetris!",
         "onClick" => "../../components/Kids/games/Tetris.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/run.png",
+        "title" => "Run Pixie Run!",
+        "description" => "Play the classic game of Run Pixie Run!",
+        "onClick" => "../../components/Kids/games/run/Run.html"
+    ],
+    [
+        "imgSrc" => "../../components/Kids/images/run.png",
+        "title" => "Run Pixie Run!",
+        "description" => "Play the classic game of Run Pixie Run!",
+        "onClick" => "../../components/Kids/games/smth.html"
     ]
 ];
 ?>
@@ -73,6 +85,7 @@ $games = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeTube</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
 
     <style>
         body {
@@ -158,6 +171,31 @@ $games = [
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.4/pixi.min.js"></script>
     <script>
+        const app = new PIXI.Application({ antialias: true, backgroundColor: 0xF8F9FA });
+        document.body.appendChild(app.view);
+
+        const graphics = new PIXI.Graphics();
+
+        // Draw star
+        graphics.lineStyle(2, 0xFFFFFF);
+        graphics.beginFill(0xFFCC5A, 1);
+        graphics.drawStar(80, 510, 7, 50);
+        graphics.endFill();
+
+        
+        // Create text
+        const textStyle = new PIXI.TextStyle({
+        fontFamily: 'Arial',
+        fontSize: 16,
+        fill: '#000000',
+        });
+
+        const text = new PIXI.Text('Made by Idea & Tali !', textStyle);
+        text.x = 150; // Adjust the x-coordinate of the text
+        text.y = 490; // Adjust the y-coordinate of the text
+
+        app.stage.addChild(graphics, text);
+
     </script>
 </body>
 

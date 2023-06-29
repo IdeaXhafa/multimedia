@@ -4,7 +4,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../style.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+  
   <style>
     * {
       box-sizing: border-box;
@@ -27,7 +28,7 @@
       max-width: 1000px;
       position: relative;
       margin: auto;
-      margin-top: 100px; 
+      margin-top: 100px;
       margin-left: 300px;
     }
 
@@ -122,6 +123,22 @@
 
   <script src="slider.js"></script>
 
+  <!-- <script>
+    const app = new PIXI.Application({ antialias: true, backgroundColor: 0xFFFFFF });
+    document.body.insertBefore(app.view, document.body.firstChild);
+
+    const graphics = new PIXI.Graphics();
+
+    graphics.lineStyle(2, 0xFFFFFF);
+    graphics.beginFill(0x35CC5A, 1);
+    graphics.drawStar(0, 50, 5, 50);
+    graphics.endFill();
+
+    graphics.x = 60;
+    graphics.y = 90;
+
+    app.stage.addChild(graphics);
+  </script> -->
 </body>
 
 </html>
