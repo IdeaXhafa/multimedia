@@ -61,18 +61,30 @@ $games = [
         "description" => "Play the classic game of Tetris!",
         "onClick" => "../../components/Kids/games/Tetris.html"
     ],
+    // [
+    //     "imgSrc" => "../../components/Kids/images/run.png",
+    //     "title" => "Run Pixie Run!",
+    //     "description" => "Play the classic game of Run Pixie Run!",
+    //     "onClick" => "../../components/Kids/games/run/Run.html"
+    // ],
+    // [
+    //     "imgSrc" => "../../components/Kids/images/run.png",
+    //     "title" => "Run Pixie Run!",
+    //     "description" => "Play the classic game of Run Pixie Run!",
+    //     "onClick" => "../../components/Kids/games/smth.html"
+    // ]
     [
-        "imgSrc" => "../../components/Kids/images/run.png",
-        "title" => "Run Pixie Run!",
-        "description" => "Play the classic game of Run Pixie Run!",
-        "onClick" => "../../components/Kids/games/run/Run.html"
+        "imgSrc" => "../../components/Kids/images/hangman.png",
+        "title" => "Hangman",
+        "description" => "Play the classic game of Hangman!",
+        "onClick" => "../../components/Kids/games/hangman/Hangman.html"
     ],
     [
-        "imgSrc" => "../../components/Kids/images/run.png",
-        "title" => "Run Pixie Run!",
-        "description" => "Play the classic game of Run Pixie Run!",
-        "onClick" => "../../components/Kids/games/smth.html"
-    ]
+        "imgSrc" => "../../components/Kids/images/hangman.png",
+        "title" => "Puzzle",
+        "description" => "Play the classic game of Puzzle!",
+        "onClick" => "../../components/Kids/games/puzzle/Puzzle.html"
+    ],
 ];
 ?>
 
