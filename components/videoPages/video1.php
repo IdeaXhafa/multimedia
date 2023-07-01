@@ -142,7 +142,7 @@
                 <span>Posted on: May 21, 2023</span>
             </div>
             <button class="subscribe-button">Subscribe</button>
-            <button class="like-button">Watch Later</button>
+            <button class="watch-later-button" onclick="saveToWatchLater()">Watch Later</button>
             <div class="like-dislike-buttons">
                 <button class="like-button">Like</button>
                 <button class="dislike-button">Dislike</button>
@@ -157,36 +157,33 @@
 
     <script src="./js/videojs.js"></script>
     <script>
-        // Get the subscribe button
-        const subscribeButton = document.querySelector('.subscribe-button');
+        function saveToWatchLater() {
+        // Get the video source URL
+        var videoSrc = '../../videos/video5.mp4';
 
-        // Add event listener to the subscribe button
-        subscribeButton.addEventListener('click', function () {
-            // Get the video source
-            const videoSource = document.querySelector('video').src;
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
 
-            // Make an AJAX request or perform any other necessary action to save the video information
-            // to your subscription list, e.g., using fetch or sending a POST request to your server
+        // Set up the request
+        xhr.open('POST', '../WatchLater/watchlater.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            // Example AJAX request using fetch
-            fetch('./Subscriptions/subscription.php', {
-                method: 'POST',
-                body: JSON.stringify({ videoSource }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Video added to subscription list:', data);
-                    // You can handle the response from the server here
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    // Handle the error case
-                });
-        });
+        // Set up the callback function
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+            // Request succeeded, handle the response here if needed
+            console.log(xhr.responseText);
+            } else {
+            // Request failed, handle the error here if needed
+            console.error('Request failed. Status:', xhr.status);
+            }
+        };
+
+        // Send the request with the video source URL in the request body
+        xhr.send('videoSrc=' + encodeURIComponent(videoSrc));
+        }
     </script>
+
 
 </body>
 

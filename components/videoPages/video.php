@@ -134,7 +134,9 @@
 
     <div class="video-container">
         <div class="main-video">
+
             <video src="../../videos/<?php echo $file; ?>" controls></video>
+
             <div class="video-content">
                 <h1 class="video-title">Light rain for Sleeping, Relax, Study, Insomnia, Reduce Stress.</h1>
                 <div class="video-description">
@@ -156,7 +158,7 @@
                     <span>Posted on: May 21, 2023</span>
                 </div>
                 <button class="subscribe-button">Subscribe</button>
-                <button class="like-button">Watch Later</button>
+                <button class="watch-later-button" onclick="saveToWatchLater()">Watch Later</button>
                 <div class="like-dislike-buttons">
                     <button class="like-button">Like</button>
                     <button class="dislike-button">Dislike</button>
@@ -186,6 +188,39 @@
     </div>
 
     <script src="./js/videojs.js"></script>
+
+    <script>
+        function saveToWatchLater() {
+        // Get the video source URL
+        var videoSrc = "../../videos/<?php echo $file; ?>";
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Set up the request
+        xhr.open('POST', '../WatchLater/watchlater.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Set up the callback function
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+            // Request succeeded, handle the response here if needed
+            console.log(xhr.responseText);
+            // Display the video source URL in the watchlater.php file
+            var videoSrcElement = document.createElement('p');
+            videoSrcElement.textContent = 'Video Source URL: ' + videoSrc;
+            document.querySelector('.related-videos').appendChild(videoSrcElement);
+            } else {
+            // Request failed, handle the error here if needed
+            console.error('Request failed. Status:', xhr.status);
+            }
+        };
+
+        // Send the request with the video source URL in the request body
+        xhr.send('videoSrc=' + encodeURIComponent(videoSrc));
+        }
+    </script>
+
 </body>
 
 </html>

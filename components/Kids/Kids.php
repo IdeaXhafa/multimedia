@@ -80,7 +80,7 @@ $games = [
         "onClick" => "../../components/Kids/games/hangman/Hangman.html"
     ],
     [
-        "imgSrc" => "../../components/Kids/images/hangman.png",
+        "imgSrc" => "../../components/Kids/images/puzzle.png",
         "title" => "Puzzle",
         "description" => "Play the classic game of Puzzle!",
         "onClick" => "../../components/Kids/games/puzzle/Puzzle.html"

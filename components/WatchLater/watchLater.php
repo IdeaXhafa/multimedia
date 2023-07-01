@@ -1,3 +1,24 @@
+<?php 
+$file = $_GET['file'];
+
+// Use the value of $file in your PHP code
+// For example, you can use it to generate the video source URL
+// $videoSrc = '../../videos/' . $file;
+
+// // Create a response array
+// $response = array(
+//     'success' => true,
+//     'videoSrc' => $videoSrc
+// );
+
+// // Set the response header to JSON
+// header('Content-Type: application/json');
+
+// // Send the JSON response
+// echo json_encode($response);
+// exit;
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -119,26 +140,32 @@
     <strong>
       <p style="text-align: right;">Your watch later list:</p>
     </strong>
+    <div id="videoContainer"></div>
   </div>
 
   <script src="slider.js"></script>
 
-  <!-- <script>
-    const app = new PIXI.Application({ antialias: true, backgroundColor: 0xFFFFFF });
-    document.body.insertBefore(app.view, document.body.firstChild);
+  <script>
+    // AJAX request to get the video source
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'get_video.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        if (response.success) {
+          const videoContainer = document.getElementById('videoContainer');
+          const videoElement = document.createElement('video');
+          videoElement.src = response.videoSrc;
+          videoElement.controls = true;
+          videoContainer.appendChild(videoElement);
+        }
+      }
+    };
+    xhr.send('videoSrc=<?php echo urlencode($file); ?>'); 
 
-    const graphics = new PIXI.Graphics();
+  </script>
 
-    graphics.lineStyle(2, 0xFFFFFF);
-    graphics.beginFill(0x35CC5A, 1);
-    graphics.drawStar(0, 50, 5, 50);
-    graphics.endFill();
-
-    graphics.x = 60;
-    graphics.y = 90;
-
-    app.stage.addChild(graphics);
-  </script> -->
 </body>
 
 </html>
